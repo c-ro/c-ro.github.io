@@ -21,23 +21,24 @@ var createMole = function(){
     moles.push([mole.id, mole.vis]);
     mole.onmouseup = function(){hide(mole.id)};
     mole.onmousedown = function(){whack(mole)};
-
     
-    if(pW >= size * 80){
-        document.getElementById('container').style.width = size * 80;
+    if(pW >= 400){
+        document.getElementById('container').style.width = size * 85;
     } else {
         document.getElementById('container').style.width = (pW);
-        document.getElementById('container').style.height = (pH);
-        pieces = Math.floor(Math.floor((pW * 0.90))/80) * Math.floor(Math.floor((pH * 0.90))/80);
+        document.getElementById('container').style.height = (pH * 0.90);
+        pieces = Math.floor(pW/85) * Math.floor(pH/85);
     };
 
     document.getElementById('main').appendChild(mole);
 }
 
-for(i = 0; i < pieces; i++){
+for(i = 0; i < Math.floor(pieces); i++){
     createMole();
     counter++;
 }
+
+console.log(pieces);
 
 function red(img){
     document.getElementById(img).setAttribute("src", hitmole);
@@ -74,11 +75,12 @@ function whack(img){
 
 }
 
+//return random even or odd number based on request
 function random(type){
     num = Math.floor(Math.random() * pieces);
-    console.log(num);
     return type === "even" && num % 2 === 0 ? num : num + 1;
 }
 
-window.setInterval(function(){show(moles[random("odd")][0])}, (750 - 250) + 250);
-window.setInterval(function(){show(moles[random("even")][0])}, (1000 - 500) + 500);
+/// Start the game and set speeds
+window.setInterval(function(){show(moles[random("odd")][0])}, (1000 - 500) + 500);
+window.setInterval(function(){show(moles[random("even")][0])}, (1250 - 750) + 750);

@@ -2,6 +2,10 @@ body {
 	text-align: center;
 }
 
+/*img {
+	border: 1px solid black;
+}*/
+
 #container{
 	width: 0px;
 	margin-left: auto;
@@ -10,8 +14,7 @@ body {
 
 #main {
 	border: 1px solid black;
-	width: 90%;
-	height: 95%;
+	padding: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
