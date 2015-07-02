@@ -27,11 +27,11 @@ var createMole = function(){
 
     
     if(pW >= size * 80){
-        document.getElementById('main').style.width = size * 80;
+        document.getElementById('container').style.width = size * 80;
     } else {
-        document.getElementById('main').style.width = pW;
-        document.getElementById('main').style.height = pH;
-        pieces = Math.floor(pW/80) * Math.floor(pH/80);
+        document.getElementById('container').style.width = (pW * 0.95);
+        document.getElementById('container').style.height = (pH * 0.95);
+        pieces = Math.floor((pW * 0.95)/80) * Math.floor((pH * 0.95)/80);
     };
 
     document.getElementById('main').appendChild(mole);
