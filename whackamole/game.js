@@ -19,9 +19,9 @@ var createMole = function(){
     mole.height = 80;
     mole.vis = false;
     moles.push([mole.id, mole.vis]);
-    mole.onmouseup = function(){hide(mole.id)};
-    mole.onmouseout = function(){hide(mole.id)};
-    mole.onmousedown = function(){whack(mole)};
+    // mole.onmouseup = function(){hide(mole.id)};
+    // mole.onmouseout = function(){hide(mole.id)};
+    mole.onclick= function(){whack(mole)};
     
     if(pW >= 400){
         document.getElementById('container').style.width = size * 85;
@@ -67,10 +67,11 @@ function show(img){
 
 function whack(img){
     if (moles[img.id][1]){
+        red(img.id);
         smack();
         moles[img.id][1] = false;
         score++;
-        red(img.id);
+        setTimeout(function(){hide(img.id)},125);
         document.getElementById('scoreboard').innerHTML = totalMoles + "/" + score;
     }
 
