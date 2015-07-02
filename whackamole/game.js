@@ -30,8 +30,8 @@ var createMole = function(){
         document.getElementById('container').style.width = size * 80;
     } else {
         document.getElementById('container').style.width = (pW * 0.95);
-        document.getElementById('container').style.height = (pH * 0.95);
-        pieces = Math.floor((pW * 0.95)/80) * Math.floor((pH * 0.95)/80);
+        document.getElementById('container').style.height = (pH * 0.90);
+        pieces = Math.floor((pW * 0.95)/80) * Math.floor((pH * 0.90)/80);
     };
 
     document.getElementById('main').appendChild(mole);
