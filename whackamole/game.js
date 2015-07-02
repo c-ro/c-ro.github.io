@@ -11,9 +11,6 @@ var moles = [],
 var pW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 var pH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 
-document.write("width: " + pW + "\n");
-document.write("height: " + pH);
-
 var createMole = function(){
     var mole = document.createElement("img");
     mole.src = hole;
@@ -41,8 +38,6 @@ for(i = 0; i < pieces; i++){
     createMole();
     counter++;
 }
-
-document.write("p " + pieces);
 
 function red(img){
     document.getElementById(img).setAttribute("src", hitmole);
