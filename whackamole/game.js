@@ -7,6 +7,9 @@ var moles = [],
     mole = "http://i.imgur.com/bdg42Sc.png",
     hitmole = "http://i.imgur.com/SaENQoX.png";
 
+var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+
 var createMole = function(){
     var mole = document.createElement("img");
     mole.src = hole;
