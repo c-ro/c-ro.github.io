@@ -1,5 +1,6 @@
 var moles = [],
     size = 8;
+    pieces = size * size,
     counter = 0,
     totalMoles = 0,
     score = 0,
@@ -7,11 +8,11 @@ var moles = [],
     mole = "http://i.imgur.com/bdg42Sc.png",
     hitmole = "http://i.imgur.com/SaENQoX.png";
 
-var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+var pW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+var pH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 
-document.write("width: " + w + "\n");
-document.write("height: " + h);
+document.write("width: " + pW + "\n");
+document.write("height: " + pH);
 
 var createMole = function(){
     var mole = document.createElement("img");
@@ -24,11 +25,19 @@ var createMole = function(){
     mole.onmouseup = function(){hide(mole.id)};
     mole.onmousedown = function(){whack(mole)};
 
-    document.getElementById('main').style.width = size * 80;
+    
+    if(pW >= size * 80){
+        document.getElementById('main').style.width = size * 80;
+    } else {
+        document.getElementById('main').style.width = pW;
+        document.getElementById('main').style.height = pH;
+        pieces = Math.floor(pW/80) * Math.floor(pH/80);
+    };
+
     document.getElementById('main').appendChild(mole);
 }
 
-for(i = 0; i < size * size; i++){
+for(i = 0; i < pieces; i++){
     createMole();
     counter++;
 }
