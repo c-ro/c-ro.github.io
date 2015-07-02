@@ -20,6 +20,7 @@ var createMole = function(){
     mole.vis = false;
     moles.push([mole.id, mole.vis]);
     mole.onmouseup = function(){hide(mole.id)};
+    mole.onmouseout = function(){hide(mole.id)};
     mole.onmousedown = function(){whack(mole)};
     
     if(pW >= 400){
