@@ -73,5 +73,12 @@ function whack(img){
     }
 
 }
-window.setInterval(function(){show(moles[Math.floor(Math.random() * (size * size - 1))][0])}, (750 - 500) + 500);
-// window.setInterval(function(){show(moles[Math.floor(Math.random() * 8)][0])}, (1000 - 500) + 500);
+
+function random(type){
+    num = Math.floor(Math.random() * pieces);
+    console.log(num);
+    return type === "even" && num % 2 === 0 ? num : num + 1;
+}
+
+window.setInterval(function(){show(moles[random("odd")][0])}, (750 - 250) + 250);
+window.setInterval(function(){show(moles[random("even")][0])}, (1000 - 500) + 500);
