@@ -6,14 +6,14 @@ body {
 	width: 0px;
 	margin-left: auto;
 	margin-right: auto;
-/*	border: 1px dotted black*/;
 }
 
 #main {
 	border: 1px solid black;
 	width: 90%;
 	height: 90%;
-	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	cursor: crosshair;
 	flex-flow: wrap;

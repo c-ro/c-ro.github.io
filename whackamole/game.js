@@ -29,9 +29,9 @@ var createMole = function(){
     if(pW >= size * 80){
         document.getElementById('container').style.width = size * 80;
     } else {
-        document.getElementById('container').style.width = (pW * 0.90);
-        document.getElementById('container').style.height = (pH * 0.90);
-        pieces = Math.floor((pW * 0.90)/80) * Math.floor((pH * 0.90)/80);
+        document.getElementById('container').style.width = (pW);
+        document.getElementById('container').style.height = (pH);
+        pieces = Math.floor(Math.floor((pW * 0.90))/80) * Math.floor(Math.floor((pH * 0.90))/80);
     };
 
     document.getElementById('main').appendChild(mole);
@@ -41,6 +41,8 @@ for(i = 0; i < pieces; i++){
     createMole();
     counter++;
 }
+
+document.write("p " + pieces);
 
 function red(img){
     document.getElementById(img).setAttribute("src", hitmole);
