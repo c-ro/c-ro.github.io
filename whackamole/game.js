@@ -1,6 +1,4 @@
 var moles = [],
-    size = 8;
-    pieces = size * size,
     counter = 0
     totalMoles = 0,
     score = 0,
@@ -10,6 +8,9 @@ var moles = [],
 
 var pW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 var pH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+var viewWidth = pH * 0.9;
+var viewHeight = pH * 0.6;
+var pieces = Math.floor(viewWidth/80) * Math.floor(viewHeight/80);
 
 var createMole = function(){
     var mole = document.createElement("img");
@@ -23,13 +24,13 @@ var createMole = function(){
     // mole.onmouseout = function(){hide(mole.id)};
     mole.onclick = function(){whack(mole)};
     
-    if(pW >= 400){
-        document.getElementById('container').style.width = size * 85;
-    } else {
-        document.getElementById('container').style.width = (pW);
-        document.getElementById('container').style.height = (pH * 0.90);
-        pieces = Math.floor(pW/85) * Math.floor(pH/85);
-    };
+    // if(pW >= 400){
+    //     document.getElementById('container').style.width = size * 85;
+    // } else {
+        document.getElementById('container').style.width = viewWidth;
+        document.getElementById('container').style.height = viewHeight;
+        // document.getElementById('container').style.height = (pH * 0.90);
+    // };
 
     document.getElementById('main').appendChild(mole);
 }
@@ -38,8 +39,6 @@ for(i = 0; i < Math.floor(pieces); i++){
     createMole();
     counter++;
 }
-
-console.log(pieces);
 
 function randomHead(){
     return images[Math.floor(Math.random() * images.length)];
