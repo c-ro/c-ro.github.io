@@ -1,15 +1,15 @@
 var moles = [],
     size = 8;
     pieces = size * size,
-    counter = 0,
+    counter = 0
     totalMoles = 0,
     score = 0,
-    hole = "http://i.imgur.com/gJ6MKsG.png",
-    mole = "http://i.imgur.com/bdg42Sc.png",
-    hitmole = "http://i.imgur.com/SaENQoX.png";
+    hole = "slug.png",
+    mole = "bush.jpg",
+    images = ['trump.png','rubio.png','perry.png','paul.png','pataki.png','jindal.png','huckabee.png','graham.png','fiorina.png','cruz.png','christie.png','carson.png','bush.png'];
 
-var pW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-var pH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+var pW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var pH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 var createMole = function(){
     var mole = document.createElement("img");
@@ -21,7 +21,7 @@ var createMole = function(){
     moles.push([mole.id, mole.vis]);
     // mole.onmouseup = function(){hide(mole.id)};
     // mole.onmouseout = function(){hide(mole.id)};
-    mole.onclick= function(){whack(mole)};
+    mole.onclick = function(){whack(mole)};
     
     if(pW >= 400){
         document.getElementById('container').style.width = size * 85;
@@ -41,9 +41,15 @@ for(i = 0; i < Math.floor(pieces); i++){
 
 console.log(pieces);
 
-function red(img){
-    document.getElementById(img).setAttribute("src", hitmole);
-};
+function randomHead(){
+    return images[Math.floor(Math.random() * images.length)];
+}
+
+function red(img){ 
+    var filename = img.src.search(/[^\/]*$/);
+    filename = img.src.slice(filename);
+    document.getElementById(img.id).setAttribute("src", "hit" + filename);
+}
 
 function smack() {
     var smk = new Audio("whack.mp3");
@@ -53,7 +59,7 @@ function smack() {
 function hide(img){
     var img = img.id || img;
     moles[img][1] = false;
-    document.getElementById(img).setAttribute("src", "http://i.imgur.com/gJ6MKsG.png");
+    document.getElementById(img).setAttribute("src", hole);
 }
 
 function show(img){
@@ -61,13 +67,14 @@ function show(img){
     moles[img][1] = true;
     document.getElementById('scoreboard').innerHTML = totalMoles + "/" + score;
     var change = document.getElementById(img);
-    change.setAttribute("src", mole);
+    var piece = randomHead();
+    change.setAttribute("src", piece);
     setTimeout(function(){hide(img)}, Math.random() * (7000 - 1000) + 1000);
 }
 
 function whack(img){
     if (moles[img.id][1]){
-        red(img.id);
+        red(img);
         smack();
         moles[img.id][1] = false;
         score++;
