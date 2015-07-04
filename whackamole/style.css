@@ -46,7 +46,7 @@ img {
 	border: 1px solid black;
 }
 
-.gradient-blue {
+/*.gradient-blue {
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3b679e+0,207cca+21,4c91c9+49,207cca+74,3b679e+100 */
 	background: rgb(59,103,158); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(59,103,158,1) 0%, rgba(32,124,202,1) 21%, rgba(76,145,201,1) 49%, rgba(32,124,202,1) 74%, rgba(59,103,158,1) 100%); /* FF3.6+ */
@@ -71,5 +71,5 @@ background: -ms-linear-gradient(top,  rgba(163,34,36,1) 0%,rgba(188,86,93,1) 21%
 background: linear-gradient(45deg,  rgba(163,34,36,1) 0%,rgba(188,86,93,1) 21%,rgba(255,181,181,1) 49%,rgba(188,86,93,1) 74%,rgba(163,34,36,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a32224', endColorstr='#a32224',GradientType=0 ); /* IE6-9 */
 
-}
+}*/
 
