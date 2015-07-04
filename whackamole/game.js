@@ -82,12 +82,12 @@ function whack(img){
     var smackFunc = smack;
     var redFunc = red;
     if (moles[img.id][1]){
-        redFunc(img);
         smackFunc();
+        redFunc(img);   
         moles[img.id][1] = false;
-        score++;
-        setTimeout(function(){hide(img.id)},125);
+        setTimeout(function(){hide(img.id)},50);
         display.innerHTML = totalMoles + "/" + score;
+        score++;
     }
 }
 
