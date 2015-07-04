@@ -67,6 +67,7 @@ function smack() {
 function hide(img){
     var img = img.id || img;
     moles[img][1] = false;
+    setTimeout(10);
     document.getElementById(img).setAttribute("src", hole);
 }
 
