@@ -18,6 +18,10 @@ if (pW < pH){
 }
 
 var pieces = Math.floor(viewWidth/80) * Math.floor(viewHeight/80);
+        document.getElementById('container').style.width = viewWidth;
+        document.getElementById('container').style.height = viewHeight;
+        document.getElementById('display').style.width = viewWidth;
+        document.getElementById('display').style.height = viewHeight * 0.05;
 
 var createMole = function(){
     var mole = document.createElement("img");
@@ -27,19 +31,7 @@ var createMole = function(){
     mole.height = 80;
     mole.vis = false;
     moles.push([mole.id, mole.vis]);
-    // mole.onmouseup = function(){hide(mole.id)};
-    // mole.onmouseout = function(){hide(mole.id)};
     mole.onclick = function(){whack(mole)};
-    
-    // if(pW >= 400){
-    //     document.getElementById('container').style.width = size * 85;
-    // } else {
-        document.getElementById('container').style.width = viewWidth;
-        document.getElementById('container').style.height = viewHeight;
-        document.getElementById('display').style.width = viewWidth;
-        document.getElementById('display').style.height = viewHeight * 0.05;
-        // document.getElementById('container').style.height = (pH * 0.90);
-    // };
 
     document.getElementById('main').appendChild(mole);
 }

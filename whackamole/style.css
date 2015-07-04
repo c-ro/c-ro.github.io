@@ -73,3 +73,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a32224', end
 
 }
 
+#load {
+	visibility: hidden;
+	display: none;
+}
