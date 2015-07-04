@@ -3,12 +3,10 @@ var doc = document,
     imgCounter = 0
     totalMoles = 0,
     score = 0,
-    hole = "slug.png",
-    mole = "bush.jpg",
     cache = [],
     display = doc.getElementById('display');
     main = doc.getElementById('main');
-    images = ['trump.png','rubio.png','perry.png','paul.png','pataki.png','jindal.png','huckabee.png','graham.png','fiorina.png','cruz.png','christie.png','carson.png','bush.png'];
+    images = ['trump','rubio','perry','paul','pataki','jindal','huckabee','graham','fiorina','cruz','christie','carson','bush'];
 
 var pW = Math.max(doc.documentElement.clientWidth, window.innerWidth || 0);
 var pH = Math.max(doc.documentElement.clientHeight, window.innerHeight || 0);
@@ -25,15 +23,15 @@ if (pW < pH){
         doc.getElementById('display').style.width = viewWidth;
         doc.getElementById('display').style.height = viewHeight * 0.05;
 
-var pieces = Math.floor(viewWidth/80) * Math.floor(viewHeight/80);
+var pieces = Math.floor(viewWidth/100) * Math.floor(viewHeight/100);
 
 
 var createMole = function(){
-    var mole = doc.createElement("img");
-    mole.src = hole;
+    var mole = doc.createElement("div");
+    mole.setAttribute('class', 'slug');
     mole.id = imgCounter;
-    mole.width = 80;
-    mole.height = 80;
+    mole.width = 100;
+    mole.height = 100;
     mole.vis = false;
     moles.push([mole.id, mole.vis]);
     whackFunc = whack;
@@ -52,9 +50,7 @@ function randomHead(){
 }
 
 function red(img){ 
-    var filename = img.src.search(/[^\/]*$/);
-    filename = img.src.slice(filename);
-    doc.getElementById(img.id).setAttribute("src", "hit" + filename);
+    doc.getElementById(img.id).setAttribute("class", "hit" + img.className);
 }
 
 function smack() {
@@ -66,7 +62,7 @@ function hide(img){
     var img = img.id || img;
     moles[img][1] = false;
     setTimeout(10);
-    cache[img].setAttribute("src", hole);
+    cache[img].setAttribute("class", "slug");
 }
 
 function show(img){
@@ -74,7 +70,7 @@ function show(img){
     moles[img][1] = true;
     display.innerHTML = totalMoles + "/" + score;
     var piece = randomHead();
-    cache[img].setAttribute("src", piece);
+    cache[img].setAttribute("class", piece);
     setTimeout(function(){hide(img)}, Math.random() * (7000 - 1000) + 1000);
 }
 

@@ -2,23 +2,38 @@ body {
 	text-align: center;
 }
 
-img {
-/*	border: 2px solid white;*/ 
-	margin-left: auto;
-	margin-right: auto;
-}
-/*
-.head {
-    background-image: url("http://i.imgur.com/SaENQoX.png");
-    width: 75px;
-    height: 75px;
-}
+.bush {background-image: url('bush.png'); width: 100px; height: 100px;}
+.carson {background-image: url('carson.png'); width: 100px; height: 100px;}
+.christie {background-image: url('christie.png'); width: 100px; height: 100px;}
+.cruz {background-image: url('cruz.png'); width: 100px; height: 100px;}
+.fiorina {background-image: url('fiorina.png'); width: 100px; height: 100px;}
+.graham {background-image: url('graham.png'); width: 100px; height: 100px;}
+.hitbush {background-image: url('hitbush.png'); width: 100px; height: 100px;}
+.hitcarson {background-image: url('hitcarson.png'); width: 100px; height: 100px;}
+.hitchristie {background-image: url('hitchristie.png'); width: 100px; height: 100px;}
+.hitcruz {background-image: url('hitcruz.png'); width: 100px; height: 100px;}
+.hitfiorina {background-image: url('hitfiorina.png'); width: 100px; height: 100px;}
+.hitgraham {background-image: url('hitgraham.png'); width: 100px; height: 100px;}
+.hithuckabee {background-image: url('hithuckabee.png'); width: 100px; height: 100px;}
+.hitjindal {background-image: url('hitjindal.png'); width: 100px; height: 100px;}
+.hitpataki {background-image: url('hitpataki.png'); width: 100px; height: 100px;}
+.hitpaul {background-image: url('hitpaul.png'); width: 100px; height: 100px;}
+.hitperry {background-image: url('hitperry.png'); width: 100px; height: 100px;}
+.hitrubio {background-image: url('hitrubio.png'); width: 100px; height: 100px;}
+.hittrump {background-image: url('hittrump.png'); width: 100px; height: 100px;}
+.huckabee {background-image: url('huckabee.png'); width: 100px; height: 100px;}
+.jindal {background-image: url('jindal.png'); width: 100px; height: 100px;}
+.pataki {background-image: url('pataki.png'); width: 100px; height: 100px;}
+.paul {background-image: url('paul.png'); width: 100px; height: 100px;}
+.perry {background-image: url('perry.png'); width: 100px; height: 100px;}
+.rubio {background-image: url('rubio.png'); width: 100px; height: 100px;}
+.trump {background-image: url('trump.png'); width: 100px; height: 100px;}
 
 .slug { 
-    background-image: url("http://i.imgur.com/bdg42Sc.png");
-    width: 75px;
-    height: 75px;    
-}*/
+    background-image: url("slug.png");
+    width: 100px;
+    height: 100px;    
+}
 
 #ticker {
 	font-family: sans-serif;
