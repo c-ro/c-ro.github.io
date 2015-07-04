@@ -8,8 +8,15 @@ var moles = [],
 
 var pW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 var pH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-var viewWidth = pH * 0.9;
-var viewHeight = pH * 0.6;
+
+if (pW < pH){
+    var viewWidth = pW * 0.95;
+    var viewHeight = pH * 0.95;
+} else {
+    var viewHeight = pH * 0.55;
+    var viewWidth = viewHeight * 1.33;
+}
+
 var pieces = Math.floor(viewWidth/80) * Math.floor(viewHeight/80);
 
 var createMole = function(){
@@ -29,6 +36,8 @@ var createMole = function(){
     // } else {
         document.getElementById('container').style.width = viewWidth;
         document.getElementById('container').style.height = viewHeight;
+        document.getElementById('display').style.width = viewWidth;
+        document.getElementById('display').style.height = viewHeight * 0.05;
         // document.getElementById('container').style.height = (pH * 0.90);
     // };
 
@@ -64,7 +73,7 @@ function hide(img){
 function show(img){
     totalMoles++;
     moles[img][1] = true;
-    document.getElementById('scoreboard').innerHTML = totalMoles + "/" + score;
+    document.getElementById('display').innerHTML = totalMoles + "/" + score;
     var change = document.getElementById(img);
     var piece = randomHead();
     change.setAttribute("src", piece);
@@ -78,7 +87,7 @@ function whack(img){
         moles[img.id][1] = false;
         score++;
         setTimeout(function(){hide(img.id)},125);
-        document.getElementById('scoreboard').innerHTML = totalMoles + "/" + score;
+        document.getElementById('display').innerHTML = totalMoles + "/" + score;
     }
 
 }
@@ -90,5 +99,6 @@ function random(type){
 }
 
 /// Start the game and set speeds
+
 window.setInterval(function(){show(moles[random("odd")][0])}, (1000 - 500) + 500);
 window.setInterval(function(){show(moles[random("even")][0])}, (1250 - 750) + 750);
