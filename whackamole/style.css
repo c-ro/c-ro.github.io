@@ -3,9 +3,7 @@ body {
 }
 
 img {
-/*	border: 2px solid white;*/
-    -webkit-filter: drop-shadow(-1px 2px 3px #555);
-    filter:         drop-shadow(-1px 2px 3px #555); 
+/*	border: 2px solid white;*/ 
 	margin-left: auto;
 	margin-right: auto;
 }
