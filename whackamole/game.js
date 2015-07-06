@@ -4,8 +4,9 @@ var doc = document,
     totalMoles = 0,
     score = 0,
     cache = [],
-    display = doc.getElementById('display');
-    main = doc.getElementById('main');
+    display = doc.getElementById('display'),
+    rating = doc.getElementById('rating'),
+    main = doc.getElementById('main'),
     images = ['trump','rubio','perry','paul','pataki','jindal','huckabee','graham','fiorina','cruz','christie','carson','bush'];
 
 var pW = Math.max(doc.documentElement.clientWidth, window.innerWidth || 0);
@@ -19,9 +20,8 @@ if (pW < pH){
     var viewWidth = viewHeight * 1.33;
 }
         doc.getElementById('container').style.width = viewWidth;
-        doc.getElementById('container').style.height = viewHeight;
         doc.getElementById('display').style.width = viewWidth;
-        doc.getElementById('display').style.height = viewHeight * 0.05;
+        doc.getElementById('display').style.height = 40;
 
 var pieces = Math.floor(viewWidth/100) * Math.floor(viewHeight/100);
 
@@ -66,23 +66,30 @@ function hide(img){
 }
 
 function show(img){
+    var approvalFunc = approval;
     totalMoles++;
     moles[img][1] = true;
-    display.innerHTML = totalMoles + "/" + score;
+    approvalFunc();
     var piece = randomHead();
     cache[img].setAttribute("class", piece);
     setTimeout(function(){hide(img)}, Math.random() * (7000 - 1000) + 1000);
 }
 
+///display current score by %
+function approval(){
+    rating.innerHTML = 100 - Math.floor(100 * score/totalMoles) + "%";
+}
+
 function whack(img){
     var smackFunc = smack;
     var redFunc = red;
+    var approvalFunc = approval;
     if (moles[img.id][1]){
         smackFunc();
         redFunc(img);   
         moles[img.id][1] = false;
         setTimeout(function(){hide(img.id)},50);
-        display.innerHTML = totalMoles + "/" + score;
+        approvalFunc();
         score++;
     }
 }
@@ -92,6 +99,28 @@ function random(){
     var num = Math.floor(Math.random() * pieces);
     return num;
 }
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+function game(){
+var gameLength = 60;
+display = document.querySelector('#time');
+startTimer(gameLength, display);
 
 /// Start the game and set speeds
 window.setInterval(function(){
@@ -107,3 +136,6 @@ window.setInterval(function(){
         show(moles[num][0]);
     };
 }, (1250 - 750) + 750);
+};
+
+game();
