@@ -6,6 +6,47 @@ body {
 	text-shadow: -2px 1px 5px rgba(0, 0, 0, 1);
 }
 
+#button {
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.btn {
+  background: #8f8f8f;
+  background-image: -webkit-linear-gradient(top, #8f8f8f, #595959);
+  background-image: -moz-linear-gradient(top, #8f8f8f, #595959);
+  background-image: -ms-linear-gradient(top, #8f8f8f, #595959);
+  background-image: -o-linear-gradient(top, #8f8f8f, #595959);
+  background-image: linear-gradient(to bottom, #8f8f8f, #595959);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  text-shadow: 0px 0px 10px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#admin {
+	background-color: rgba(0,0,0,0.75);
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 5%;
+	left: 0;
+	right: 0;
+	padding: 5%;
+	width: 50%;
+	z-index: 40000;
+	font-size: 
+	-webkit-box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
+}
+
 #container{
 	margin-left: auto;
 	margin-right: auto;
@@ -20,7 +61,6 @@ body {
 }
 
 #main {
-	text-align: center;
 	padding: 5px;
 	min-height: 30px;
 	margin-left: auto;
@@ -28,6 +68,8 @@ body {
 	margin-bottom: 0px;
 	padding-bottom: 20px;
 	display: flex;
+	flex: 0 2 auto;
+	justify-content: space-between;
 	cursor: crosshair;
 	flex-flow: wrap;
 	position: relative;
