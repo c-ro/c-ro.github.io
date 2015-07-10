@@ -20,8 +20,9 @@ if (pW < pH){
     var viewWidth = viewHeight * 1.33;
 }
         doc.getElementById('container').style.width = viewWidth;
-        doc.getElementById('display').style.width = viewWidth;
-        doc.getElementById('display').style.height = 40;
+        display.style.width = viewWidth;
+        display.style.height = 40;
+        document.body.style.fontSize = 0.025 * ((viewWidth + viewHeight)/2);
 
 var pieces = Math.floor(viewWidth/100) * Math.floor(viewHeight/100);
 
@@ -100,6 +101,10 @@ function random(){
     return num;
 }
 
+function changeTicker(string){
+        setTimeout(function(){doc.getElementById('ticker').innerHTML = string;}, 7000);
+}
+
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -136,6 +141,7 @@ window.setInterval(function(){
         show(moles[num][0]);
     };
 }, (1250 - 750) + 750);
+
 };
 
 game();

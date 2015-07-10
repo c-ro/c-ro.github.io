@@ -3,6 +3,7 @@ body {
 	font-family: sans-serif;
 	color: white;
 	background-color: #333;
+	text-shadow: -2px 1px 5px rgba(0, 0, 0, 1);
 }
 
 #container{
@@ -14,7 +15,6 @@ body {
 }
 
 #display {
-	min-height: 5px;
 	height: 40px;
 	position: relative;
 }
@@ -22,47 +22,77 @@ body {
 #main {
 	text-align: center;
 	padding: 5px;
+	min-height: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 0px;
+	padding-bottom: 20px;
 	display: flex;
 	cursor: crosshair;
 	flex-flow: wrap;
 	position: relative;
-/*	border: 1px solid black;*/
+
+    -webkit-box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
 }
 
 #left {
 	float: left;
 	height: 100%;
-	width: 30%;
+	width: 110px;
 	display: inline-block;
 	position: absolute;
 	left: 0px;
 	bottom: 0px;
-
-	background-image: url("gop.png"); 
+	background: #888;
 	background-size: 100% 100%;
     background-repeat: no-repeat;
+    text-align: left;
+    clear: both;
+    font-weight: 900;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#004dbf+0,004bff+24,0001ff+50,004bff+78,0040bf+100 */
+background: rgb(0,77,191); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(0,77,191,1) 0%, rgba(0,75,255,1) 24%, rgba(0,1,255,1) 50%, rgba(0,75,255,1) 78%, rgba(0,64,191,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,77,191,1)), color-stop(24%,rgba(0,75,255,1)), color-stop(50%,rgba(0,1,255,1)), color-stop(78%,rgba(0,75,255,1)), color-stop(100%,rgba(0,64,191,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,77,191,1) 0%,rgba(0,75,255,1) 24%,rgba(0,1,255,1) 50%,rgba(0,75,255,1) 78%,rgba(0,64,191,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,77,191,1) 0%,rgba(0,75,255,1) 24%,rgba(0,1,255,1) 50%,rgba(0,75,255,1) 78%,rgba(0,64,191,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,77,191,1) 0%,rgba(0,75,255,1) 24%,rgba(0,1,255,1) 50%,rgba(0,75,255,1) 78%,rgba(0,64,191,1) 100%); /* IE10+ */
+background: linear-gradient(-45deg,  rgba(0,77,191,1) 0%,rgba(0,75,255,1) 24%,rgba(0,1,255,1) 50%,rgba(0,75,255,1) 78%,rgba(0,64,191,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004dbf', endColorstr='#0040bf',GradientType=0 ); /* IE6-9 */
+
 }
 
-/*#badge {
+#badge {
 	z-index: 3000;
-	background-color: darkblue;
+	font-size: 20px;
+/*	background: repeating-linear-gradient(
+  35deg,
+  #333,
+  #444 10px,
+  #222 30px,
+  #555 10px
+);*/
 	position: relative;
 	width: 100%;
 	float: left;
 	height: 100%;
-}*/
+}
 
-#title {
-	padding: auto;
+#title1 {
+	padding-left: 5px; 
+}
+
+#title2 {
+	font-size: 15px;
+	padding-left: 5px; 
 }
 
 #right {
 	float: right;
 	height: 100%;	
-	width: 72%;
+	width: 100%;
 	display: inline-block;
 	position: relative;
 	text-align: right;
@@ -91,9 +121,7 @@ body {
 
 #clock {
 	z-index: 1000;
-	float: left;
-	margin-left: 4%;
-	height: 12px;
+	margin-right: 25px;
 	position: relative;
 	display: inline-block;
 	padding-top: 5px;
@@ -163,4 +191,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5242', end
     background-image: url("slug.png");
     width: 100px;
     height: 100px;    
+}
+
+/*THE BOX*/
+
+.cube {
+	z-index: 15000;
+    padding: 5px;
+    margin: 5px;
+    background-color: darkgrey;
+    position: relative;
+    float: left;
+    -webkit-box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 34px -5px rgba(0,0,0,0.75);
+}
+.cube::before {
+    width: 5px;
+    height: 100%;
+    background-color: darkslateblue;
+    content:'';
+    display: block;
+    position: absolute;
+    top: 2.5px;
+    left: -5px;
+    -webkit-transform: skew(0, -45deg);
+    -moz-transform: skew(0, -45deg);
+    -o-transform: skew(0, -45deg);
+    -ms-transform: skew(0, -45deg);
+    background-color: darkslateblue;
+}
+.cube::after {
+    width: 100%;
+    height: 5px;
+    background-color: navy;
+    content:'';
+    display: block;
+    position: absolute;
+    left: -2.5px;
+    bottom: -5px;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    background-color: navy;
 }
