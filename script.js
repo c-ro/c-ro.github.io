@@ -12,7 +12,7 @@ function paintBG() {
 
 function displayLinks() {
 	// ["display text","URL"]
-	var urls = new Array(["@gnirtsmodnar","https://www.twitter.com/gnirtsmodnar"], ["github.com/c-ro","https://github.com/c-ro"],["GOP Whackamole","http://c-ro.github.io/whackamole/index.html"], ["PoS Paint","http://c-ro.github.io/PoS Paint/index.html"] ["carltography.tumblr.com","http://carltography.tumblr.com"]);
+	var urls = new Array(["@gnirtsmodnar","https://www.twitter.com/gnirtsmodnar"], ["github.com/c-ro","https://github.com/c-ro"],["GOP Whackamole","http://c-ro.github.io/whackamole/index.html"], ["PoS Paint", "http://c-ro.github.io/PoS Paint/index.html"], ["carltography.tumblr.com","http://carltography.tumblr.com"]);
 
 	for (i = 0; i < urls.length; i++){
 	    var a = $('<a>');
