@@ -11,13 +11,13 @@ function paintBG() {
 }
 
 function displayLinks() {
-	var urls = new Array("https://www.twitter.com/gnirtsmodnar", "https://github.com/c-ro", "http://carltography.tumblr.com","http://c-ro.github.io/whackamole.index.html");
+	// ["display text","URL"]
+	var urls = new Array(["@gnirtsmodnar","https://www.twitter.com/gnirtsmodnar"], ["github.com/c-ro","https://github.com/c-ro"], ["carltography.tumblr.com","http://carltography.tumblr.com"],["GOP Whackamole","http://c-ro.github.io/whackamole/index.html"]);
 
 	for (i = 0; i < urls.length; i++){
 	    var a = $('<a>');
-	    var linktext = urls[i].replace(/https:\/\/|http:\/\/|/,'');
-	    linktext = linktext.replace(/www.twitter.com\//,'@');
-	    a.attr("href", urls[i]);
+	    var linktext = urls[i][0];
+	    a.attr("href", urls[i][1]);
 	    a.html(linktext);
 	    $(a).appendTo('#main');
 	};
