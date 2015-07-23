@@ -11,7 +11,7 @@ function paintBG() {
 }
 
 function displayLinks() {
-	var urls = new Array("https://www.twitter.com/gnirtsmodnar", "https://github.com/c-ro", "http://carltography.tumblr.com");
+	var urls = new Array("https://www.twitter.com/gnirtsmodnar", "https://github.com/c-ro", "http://carltography.tumblr.com","http://c-ro.github.io/whackamole.index.html");
 
 	for (i = 0; i < urls.length; i++){
 	    var a = $('<a>');

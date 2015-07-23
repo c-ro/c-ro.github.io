@@ -3,7 +3,7 @@ var doc = document,
     imgCounter = 0
     totalMoles = 0,
     score = 0,
-    cache = [],
+    board = [],
     round = 1,
     display = doc.getElementById('display'),
     rating = doc.getElementById('rating'),
@@ -42,13 +42,8 @@ var createMole = function(){
     moles.push([mole.id, mole.vis]);
     whackFunc = whack;
     mole.onclick = function(){whackFunc(mole)};
-    cache.push(mole);
+    board.push(mole);
     main.appendChild(mole);
-}
-
-for(i = 0; i < Math.floor(pieces); i++){
-    createMole();
-    imgCounter++;
 }
 
 function randomHead(){
@@ -70,14 +65,14 @@ function hide(img){
     rating.innerHTML = approvalFunc();
     moles[img][1] = false;
     setTimeout(10);
-    cache[img].setAttribute("class", "slug");
+    board[img].setAttribute("class", "slug");
 }
 
 function show(img){
     totalMoles++;
     moles[img][1] = true;
     var piece = randomHead();
-    cache[img].setAttribute("class", piece);
+    board[img].setAttribute("class", piece);
     setTimeout(function(){hide(img)}, Math.random() * (7000 - 1000) + 1000);
 }
 
@@ -171,7 +166,7 @@ var createMole = function(){
     moles.push([mole.id, mole.vis]);
     whackFunc = whack;
     mole.onclick = function(){whackFunc(mole)};
-    cache.push(mole);
+    board.push(mole);
     main.appendChild(mole);
 }
 
@@ -181,6 +176,12 @@ function startGame(){
 }
 
 function init(round){
+
+    for(i = 0; i < Math.floor(pieces); i++){
+    createMole();
+    imgCounter++;
+    }
+
     // var admin = doc.createElement('div');
     admin.style.display = "";
     admin.id = "admin";
@@ -228,6 +229,8 @@ function init(round){
     round > 3 ? admin.appendChild(restart) : admin.appendChild(button);
 }
 
-init(round);
+console.log(board);
+
+window.onload = init(round);
 
 
