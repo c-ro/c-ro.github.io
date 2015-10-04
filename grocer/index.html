@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>groceries</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+    <script src="list.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body ng-app="grocer" ng-controller="MainCtrl">
+
+    <form ng-submit="addToList()">
+      qty:<input type-"text" ng-model="amount" id="amount-input"></input>
+      name:<input type-"text" ng-model="name" id="name-input"></input>
+      <button type="submit">add</button>
+    </form>
+
+  <table>
+    <tr>
+      <th>?</th>
+      <th>name</th>
+      <th>qty</th>
+      <th>price</th>
+      <th>sub</th>
+    </tr>
+    <tr ng-repeat="food in foodlist | orderBy:'-price'">
+      <td ng-click="crossout(food)">&#10004</td>
+      <td ng-dblclick="updateName(food)" ng-class="{crossout: food.crossout}" id="food-name-col">{{food.name}}</td>
+      <td ng-click="updateAmount(food)">{{food.amount}}</td>
+      <td ng-click="updatePrice(food)">{{food.price}}</td>
+      <td>{{food.price * food.amount}}</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">total:</td>
+      <td>{{listTotal()}}</td>
+    </tr>
+  </table>
+
+  </body>
+</html>
