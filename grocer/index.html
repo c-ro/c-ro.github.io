@@ -70,54 +70,65 @@
             <div class="header-content-inner">
 
 <!-- MAIN LIST AREA -->
-                <table class="table table-striped table-hover table-condensed">
-                    <tr>
+                <table class="table table-hover table-condensed">
+                    <tr class="main-list-header">
                       <th>?</th>
                       <th>name</th>
                       <th>qty</th>
-                      <th>unit</th>
+                      <th>units</th>
                       <th>price</th>
                       <th>sub</th>
                       <th>(X)</th>
                     </tr>
-                    <tr ng-repeat="food in foodlist | orderBy:'-price'">
-                      <td ng-click="crossout(food)" ng-class="{crossout: food.crossout}"><h1>&#10004</h1></td>
-                      <td ng-dblclick="updateName(food)" ng-class="{crossoutname: food.crossout}" id="food-name-col">{{food.name}}</td>
-                      <td ng-click="updateAmount(food)" ng-class="{crossout: food.crossout}">{{food.amount}}</td>
-                      <td ng-click="updateUnit(food)" ng-class="{crossout: food.crossout}">{{food.unit}}</td>
-                      <td ng-click="updatePrice(food)" ng-class="{crossout: food.crossout}">{{food.price}}</td>
-                      <td ng-class="{crossout: food.crossout}">{{(food.price * food.amount).toFixed(2)}}</td>
-                      <td ng-click="hideItem(item)" ng-class="{crossout: food.crossout}"><h1>&#8615</h1></td>
+
+                    <tr ng-repeat="item in itemlist | orderBy:'category'" ng-class="item.category || 'none'">
+                      <td ng-click="crossout(item)" ng-class="{crossout: item.crossout}"><h1>&#10004</h1></td>
+                      <td ng-dblclick="updateName(item)" id="item-name-col">{{item.name}}</td>
+                      <td ng-click="updateqty(item)" ng-class="{crossout: item.crossout}">{{item.qty}}</td>
+                      <td ng-click="updateUnits(item)" ng-class="{crossout: item.crossout}">{{item.units}}</td>
+                      <td ng-click="updatePrice(item)" ng-class="{crossout: item.crossout}">{{item.price}}</td>
+                      <td ng-class="{crossout: item.crossout}">{{(item.price * item.qty).toFixed(2)}}</td>
+                      <td ng-click="hideItem(item)" ng-class="{crossout: item.crossout}"><h1>&#8615</h1></td>
                     </tr>
-                    <tr>
-                      <td colspan="5" id="total">total:</td>
+                    <tr class="main-list-header">
+                      <td ng-click="updateBudget()" colspan="2" id="total">budget: {{budget}}</td>
+                      <td colspan="2">remaining: {{budget - listTotal()}}</td>
+                      <td colspan="1">total:</td>
                       <td>${{listTotal().toFixed(2)}}</td>
+                      <td ng-click="viewHidden()">&#128194</td>
                     </tr>
                 </table>
  <hr>
+
 <!-- LIST INPUT AREA -->
+
                 <div class="container">                
                     <form ng-submit="addToList()">
                         <div id="form-container">
                             <div id="inputs-container">
+                              <tt id="item-expression">{{qty || 0}} @ ${{price || 0}} per {{units}}</tt>
                               <input type-"text" ng-model="name" id="name-input" placeholder="  new item"></input><br>  
-                              <input type-"text" ng-model="amount" id="amount-input" placeholder="  quantity"></input><br>
+                              <input type-"text" ng-model="qty" id="qty-input" placeholder="  quantity"></input><br>
                               
-                              <div class="btn-group-justified" data-toggle="buttons">
-                              <label class="btn btn-units active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked>  ct.
-                              </label>
-                              <label class="btn btn-units">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> lbs
-                              </label>
-                              <label class="btn btn-units">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> oz.
-                              </label>
-                             </div>
-                             
+                                <!-- units SELECT BUTTONS -->
+                                <div class="btn-group-justified">
+                                  
+                                  <label class="btn btn-units" for="ct">
+                                    <input ng-model="units" name="unitselect" id="ct" type="radio" value="ct" checked="">  ct.
+                                  </label>
+                                  <label class="btn btn-units" for="lb">
+                                    <input ng-model="units" name="unitselect" id="lb" type="radio" value="lb">  lbs
+                                  </label>
+
+                                  <label class="btn btn-units" for="oz">
+                                    <input ng-model="units" name="unitselect" id="oz" type="radio" value="oz">  oz.
+                                  </label>
+
+                               </div>
+
                               <input type-"text" ng-model="price" id="price-input" placeholder="  price"></input><br>
 
-                              <!-- <input type-"text" ng-model="unit" id="unit-input" placeholder="  unit"></input> -->
+                              <!-- <input type-"text" ng-model="units" id="units-input" placeholder="  units"></input> -->
 
                             </div>
                             <div id="button-container">
@@ -143,6 +154,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <!-- modal service -->
+    <script src="bower_components\angular-modal-service\dst\angular-modal-service.min.js"></script>
 
 </body>
 

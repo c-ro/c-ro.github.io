@@ -479,6 +479,7 @@ th {
 }
 
 td {
+
 }
 
 .unit-select {
@@ -494,6 +495,30 @@ td {
     background-color: #ccc;
 }
 
+.meat {
+    background-color: #FF9F8E;
+}
+
+.produce {
+    background-color: #75D395;
+}
+
+.bakery {
+    background-color: #FFC88E;
+}
+
+.dryandcanned {
+    background-color: #ccc;
+}
+
+.dairy {
+    background-color: #6FADC1;
+}
+
+.none {
+    background-color: whitesmoke;
+}
+
 #total {
     text-align: right;
 }
@@ -507,6 +532,7 @@ td {
 #inputs-container { 
     float: left;
     margin: auto;
+    max-width: 166px;
 }
 
 /* add button */
@@ -518,10 +544,6 @@ td {
     padding: 5px;
     width: 75px;
     height: 75px;
-}
-
-.btn-group-justified{
-    width: 166px;
 }
 
 .btn-units {
@@ -552,4 +574,37 @@ td {
   background-image: linear-gradient(to bottom, #d6d6d6, #999799);
   text-decoration: none;
   text-transform: lowercase;
+}
+
+.btn-units input[type="radio"] {
+    display: none;
+}
+
+.unit-selected {
+  background: #d6d6d6;
+  background-image: -webkit-linear-gradient(top, #d6d6d6, #999799);
+  background-image: -moz-linear-gradient(top, #d6d6d6, #999799);
+  background-image: -ms-linear-gradient(top, #d6d6d6, #999799);
+  background-image: -o-linear-gradient(top, #d6d6d6, #999799);
+  background-image: linear-gradient(to bottom, #d6d6d6, #999799);
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+#item-expression{
+    background-color: GhostWhite;
+    color: grey;
+}
+
+.main-list-header {
+    background-color: GhostWhite;
+}
+
+.main-list-footer {
+    background-color: GhostWhite;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: black;
+  color: white;
 }
