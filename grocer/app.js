@@ -3,40 +3,32 @@ var app = angular.module('grocer', []);
 app.factory('items', [function(){
 	var list = {
 		items: [
-		  { name: 'honey', price: 0, qty: 0, units: 'lbs', category: "dryandcanned"},
-		  { name: 'miso', price: 0, qty: 0, units: '', category: "dryandcanned"},
-		  { name: 'millet', price: 0, qty: 0, units: '', category: "dryandcanned"},
-		  { name: 'thyme', price: 0, qty: 0, units: '', category: ""},
-		  { name: 'rice vinegar', price: 0, qty: 0, units: '', category: "dryandcanned"},
-		  { name: 'fish', price: 0, qty: 0, units: '', category: "meat"},
-		  { name: 'paper towels', price: 0, qty: 0, units: '', category: ""},
-		  { name: 'lentils', price: 1.69, qty: 2, units: 'lbs', category: "dryandcanned"},
-		  { name: 'lysol toilet cleaner', price: 0, qty: 0, units: '', category: ""},
-		  { name: 'spray oil', price: 0, qty: 0, units: '', category: "dryandcanned"},
-		  { name: 'scrubber sponges', price: 0, qty: 0, units: '', category: ""},
-		  { name: 'frozen peas', price: 0, qty: 0, units: '', category: ""},
-		  { name: 'mukimame', price: 0, qty: 0, units: '', category: ""},
-		  { name: 'carrots', price: 0, qty: 0, units: '', category: "produce"},
-		  { name: 'red onion', price: 2.19, qty: 1, units: 'ct', category: "produce"},
-		  { name: 'sanbal oelek', price: 0, qty: 0, units: '', category: "dryandcanned"},
-		  { name: 'half and half', price: 1.29, qty: 1, units: 'ct', category: "dairy"},
-		  { name: 'bathroom cleaner', price: 0, qty: 0, units: '', category: ""},
-  		  { name: 'hairspray', price: 0, qty: 0, units: '', category: ""},
-		  { name: 'razor handle', price: 0, qty: 0, units: '', category: ""},
-  		  { name: 'cilantro', price: 0.99, qty: 0, units: 'ct', category: "produce"},
-		  { name: 'shrimp', price: 11.98, qty: 2, units: 'lbs', category: "meat"},
-  		  { name: 'peppers', price: 1, qty: 4, units: '', category: "produce"},
-		  { name: 'corn starch', price: 0, qty: 0, units: '', category: "dryandcanned"},
-  		  { name: 'cous cous', price: 0, qty: 0, units: '', category: "dryandcanned"},
-		  { name: 'mozzarella', price: 0, qty: 0, units: '', category: "dairy"},
-  		  { name: 'capers', price: 0, qty: 0, units: '', category: "dryandcanned"},
-  		  { name: 'chicken', price: 2.49, qty: 2.1, units: 'lbs', category: "meat"}
+			{ name: 'cat food', price: 0, qty: 0, units: 'lbs', category: "pets"},
+			{ name: 'grapeseed oil', price: 0, qty: 0, units: 'ct', category: "dryandcanned"},
+			{ name: 'honey', price: 0, qty: 0, units: 'lbs', category: "dryandcanned"},
+			{ name: 'miso', price: 0, qty: 0, units: 'ct', category: "dryandcanned"},
+			{ name: 'millet', price: 0, qty: 0, units: 'ct', category: "dryandcanned"},
+			{ name: 'nivea', price: 0, qty: 0, units: 'ct', category: "personal"},
+			{ name: 'red cooking wine', price: 0, qty: 0, units: '', category: "dryandcanned"},
+			{ name: 'fish', price: 0, qty: 0, units: 'lbs', category: "meat"},
+			{ name: 'cottage cheese', price: 0, qty: 0, units: 'ct', category: "dairy"},
+			{ name: 'lentils', price: 1.69, qty: 2, units: 'lbs', category: "dryandcanned"},
+			{ name: 'sliced cheese', price: 7.99, qty: 0, units: 'lbs', category: "dairy"},
+			{ name: 'pumpernickel', price: 0, qty: 0, units: 'ct', category: "bakery"},
+			{ name: 'hairspray', price: 0, qty: 0, units: 'ct', category: "personal"},
+			{ name: 'peppers', price: 1, qty: 0, units: 'ct', category: "produce"},
+			{ name: 'tomatoes', price: 0, qty: 0, units: 't', category: "produce"},
+			{ name: 'mushrooms', price: 0, qty: 0, units: 't', category: "produce"},
+			{ name: 'onions', price: 2.19, qty: 0, units: 'ct', category: "produce"},
+			{ name: 'limes', price: 0.44, qty: 0, units: 'ct', category: "produce"},
+			{ name: 'beer', price: 9.99, qty: 0, units: 'ct', category: "beverages"},
+			{ name: 'shrimp', price: 15.98, qty: 1, units: 'lbs', category: "meat"}
 		]
 	};
 
 	return list;
 
-}])
+}]);
 
 app.controller('MainCtrl', [
 	'$scope',
@@ -52,22 +44,22 @@ app.controller('MainCtrl', [
 
 		$scope.hiddenItems = [];
 
-		$scope.categories = ["Beverages", "Bakery", "Dairy", "Dry and Canned","Frozen", "meat", "Produce", "Household", "Personal" ,"Other"];
+		$scope.categories = ["Beverages", "Bakery", "Dairy", "Dry and Canned","Frozen", "meat", "Produce", "Household", "Personal" ,"Other", "Pets"];
 
 		$scope.elementclass = [];
 
 		$scope.addClass = function(className) {
-		  $scope.elementClass.push(className);
-		}
+			$scope.elementClass.push(className);
+		};
 
-		$scope.removeClass = function(className) {s
-		  $scope.elementClass.pop(className);
-		}
+		$scope.removeClass = function(className) {
+			$scope.elementClass.pop(className);
+		};
 
 		$scope.addToList = function(){
 			if(!$scope.name || $scope.name === ''){ return; }
 
-			if(!$scope.price){ $scope.price = 0 };
+			if(!$scope.price){ $scope.price = 0; }
 
 			$scope.itemlist.push({ name: $scope.name, price: $scope.price, qty: $scope.qty, units: $scope.units} );
 
@@ -79,31 +71,10 @@ app.controller('MainCtrl', [
 			scrollToBottom();
 		};
 
-		$scope.updateQty = function(item, qty){
-			var newqty = prompt("qty: ");
-			item.qty = newqty;
-		}
-
-		$scope.updatePrice= function(item, price){
-			var newPrice= prompt("price: ");
-			item.price = newPrice;
-		}
-
-
-		$scope.updateName = function(item, name){
-			var newName = prompt("name: ");
-			item.name = newName;
-		}
-
-		$scope.updateUnits = function(item, units){
-			var newunits = prompt("units: ");
-			item.units = newunits;
-		}
-
-		$scope.updateBudget = function(){
-			var newbudget = prompt("budget: ");
-			$scope.budget = newbudget;
-		}
+		$scope.updateValue = function(item, value) {
+			var newValue = prompt(value + ": ") || item[value];
+			item[value] = newValue;
+		};
 
 		$scope.listTotal = function(){
 			var list = $scope.itemlist;
@@ -111,10 +82,10 @@ app.controller('MainCtrl', [
 
 			for(var i = 0; i < list.length; i++){
 				sum = sum + (list[i].price * list[i].qty);
-			};
+			}
 
 			return sum;
-		}
+		};
 
 		$scope.hideItem = function(item){
 			var toHide = $scope.itemlist.splice($scope.itemlist.indexOf(item), 1);
@@ -126,16 +97,16 @@ app.controller('MainCtrl', [
 			for(var i = 0; i < items.length; i++){
 				console.log(items[i]);
 			}
-		}
+		};
 
 		$scope.crossout = function(item){
 			if(item.crossout){
 				item.crossout = false;
 			} else if (!item.crossout && !checkInput(item.price)){
-				$scope.updatePrice(item);
+				$scope.updateValue(item, 'price');
 
 				if (!item.crossout && !checkInput(item.qty)){
-					$scope.updateQty(item);
+					$scope.updateValue(item, 'qty');
 				}
 
 				item.crossout = true;

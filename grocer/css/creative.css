@@ -5,7 +5,7 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
 hr {
@@ -435,7 +435,7 @@ fieldset[disabled] .btn-primary.active {
     border: 0;
     border-radius: 300px;
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans','Helvetica Neue', sans-serif;
     font-weight: 700;
 }
 
@@ -467,12 +467,23 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+    background-color: lightblue;
 }
 
 table {
     color: black;
-    font-size: 18px;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 2vmin;
+    font-weight: bold;
 }
+
+/*th,td {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #BCBCBC;
+    word-wrap: break-word;
+}*/
 
 th {
     text-align: center;
@@ -492,7 +503,6 @@ td {
 
 .crossoutname {
     text-decoration: line-through;
-    background-color: #ccc;
 }
 
 .meat {
@@ -515,8 +525,38 @@ td {
     background-color: #6FADC1;
 }
 
+.pets {
+    background-color: brown;
+}
+
+.personal {
+    background-color: mistyrose;
+}
+
+.beverages {
+    background-color: thistle;
+}
+
 .none {
     background-color: whitesmoke;
+}
+
+#qty-col{
+    width: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#units-col{
+    width: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#price-col{
+    width: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #total {
@@ -557,7 +597,7 @@ td {
   -moz-border-radius: 0;
   border-radius: 0px;
   text-shadow: 0px 0px 8px #000000;
-  font-family: Arial;
+  font-family: sans-serif;
   color: #ffffff;
   font-size: 16px;
   padding: 3px 3px 3px 3px;
@@ -596,6 +636,11 @@ td {
     color: grey;
 }
 
+.item-name-col a {
+    color: black;
+    font-style: bold;
+}
+
 .main-list-header {
     background-color: GhostWhite;
 }
@@ -605,6 +650,15 @@ td {
 }
 
 .table-hover > tbody > tr:hover {
-  background-color: black;
+  background-color: #666;
   color: white;
+}
+
+.jumbotron {
+    padding: 0px;
+    background: none;
+}
+
+.nav-pills {
+    padding: 3px;
 }

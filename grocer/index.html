@@ -70,7 +70,7 @@
             <div class="header-content-inner">
 
 <!-- MAIN LIST AREA -->
-                <table class="table table-hover table-condensed">
+                <table class="table table-hover table-condensed table-responsive">
                     <tr class="main-list-header">
                       <th>?</th>
                       <th>name</th>
@@ -81,27 +81,29 @@
                       <th>(X)</th>
                     </tr>
 
-                    <tr ng-repeat="item in itemlist | orderBy:'category'" ng-class="item.category || 'none'">
-                      <td ng-click="crossout(item)" ng-class="{crossout: item.crossout}"><h1>&#10004</h1></td>
-                      <td ng-dblclick="updateName(item)" id="item-name-col">{{item.name}}</td>
-                      <td ng-click="updateqty(item)" ng-class="{crossout: item.crossout}">{{item.qty}}</td>
-                      <td ng-click="updateUnits(item)" ng-class="{crossout: item.crossout}">{{item.units}}</td>
-                      <td ng-click="updatePrice(item)" ng-class="{crossout: item.crossout}">{{item.price}}</td>
+                    <tr ng-repeat="item in itemlist | orderBy: '-category'" ng-class="item.category || 'none'">
+                      <td ng-click="crossout(item)" ng-class="{crossout: item.crossout}">&#9553</td>
+                      <td ng-dblclick="updateValue(item, 'name')" class="item-name-col" ng-class="{crossoutname: item.crossout}"><a href="#/items/{{$index}}">{{item.name}}</a></td>
+                      <td ng-click="updateValue(item, 'qty')" ng-class="{crossout: item.crossout}" id="qty-col">{{item.qty}}</td>
+                      <td ng-click="updateValue(item, 'units')" ng-class="{crossout: item.crossout}" id="units-col">{{item.units}}</td>
+                      <td ng-click="updateValue(item, 'price')" ng-class="{crossout: item.crossout}" id="price-col">{{item.price}}</td>
                       <td ng-class="{crossout: item.crossout}">{{(item.price * item.qty).toFixed(2)}}</td>
-                      <td ng-click="hideItem(item)" ng-class="{crossout: item.crossout}"><h1>&#8615</h1></td>
+                      <td ng-click="hideItem(item)" ng-class="{crossout: item.crossout}">&#8615</td>
                     </tr>
-                    <tr class="main-list-header">
+
+                    <tr class="main-list-header"> <!-- footer tho -->
                       <td ng-click="updateBudget()" colspan="2" id="total">budget: {{budget}}</td>
                       <td colspan="2">remaining: {{budget - listTotal()}}</td>
                       <td colspan="1">total:</td>
                       <td>${{listTotal().toFixed(2)}}</td>
                       <td ng-click="viewHidden()">&#128194</td>
                     </tr>
-                </table>
- <hr>
 
-<!-- LIST INPUT AREA -->
+        </table>
 
+        <div class="row marketing">
+        <div class="col-lg-6">
+            <!-- LIST INPUT AREA -->
                 <div class="container">                
                     <form ng-submit="addToList()">
                         <div id="form-container">
@@ -110,23 +112,23 @@
                               <input type-"text" ng-model="name" id="name-input" placeholder="  new item"></input><br>  
                               <input type-"text" ng-model="qty" id="qty-input" placeholder="  quantity"></input><br>
                               
-                                <!-- units SELECT BUTTONS -->
-                                <div class="btn-group-justified">
-                                  
-                                  <label class="btn btn-units" for="ct">
-                                    <input ng-model="units" name="unitselect" id="ct" type="radio" value="ct" checked="">  ct.
-                                  </label>
-                                  <label class="btn btn-units" for="lb">
-                                    <input ng-model="units" name="unitselect" id="lb" type="radio" value="lb">  lbs
-                                  </label>
+                                  <!-- units SELECT BUTTONS -->
+                                  <div class="btn-group-justified">
+                                    
+                                    <label class="btn btn-units" for="ct">
+                                      <input ng-model="units" name="unitselect" id="ct" type="radio" value="ct" checked="">  ct.
+                                    </label>
+                                    <label class="btn btn-units" for="lb">
+                                      <input ng-model="units" name="unitselect" id="lb" type="radio" value="lb">  lbs
+                                    </label>
 
-                                  <label class="btn btn-units" for="oz">
-                                    <input ng-model="units" name="unitselect" id="oz" type="radio" value="oz">  oz.
-                                  </label>
+                                    <label class="btn btn-units" for="oz">
+                                      <input ng-model="units" name="unitselect" id="oz" type="radio" value="oz">  oz.
+                                    </label>
+                                 </div>
 
-                               </div>
-
-                              <input type-"text" ng-model="price" id="price-input" placeholder="  price"></input><br>
+                              <input type-"text" ng-model="price" id="price-input" placeholder="  price"></input>
+                              <br>
 
                               <!-- <input type-"text" ng-model="units" id="units-input" placeholder="  units"></input> -->
 
@@ -137,6 +139,7 @@
                         <div>
                     </form>
                 </div>
+        </div>
             </div>
         </div>
     </header>
@@ -154,9 +157,6 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
-
-    <!-- modal service -->
-    <script src="bower_components\angular-modal-service\dst\angular-modal-service.min.js"></script>
 
 </body>
 
