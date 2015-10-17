@@ -183,7 +183,7 @@ header {
 header .header-content {
     position: relative;
     width: 100%;
-    padding: 100px 15px;
+    padding-top: 75px;
     text-align: center;
 }
 
@@ -195,7 +195,7 @@ header .header-content .header-content-inner h1 {
 }
 
 header .header-content .header-content-inner hr {
-    margin: 30px auto;
+/*    margin: 30px auto;*/
 }
 
 header .header-content .header-content-inner p {
@@ -222,13 +222,13 @@ header .header-content .header-content-inner p {
     header .header-content .header-content-inner {
         margin-right: auto;
         margin-left: auto;
-        max-width: 1000px;
+/*        max-width: 1000px;*/
     }
 
     header .header-content .header-content-inner p {
         margin-right: auto;
         margin-left: auto;
-        max-width: 80%;
+/*        max-width: 80%;*/
         font-size: 18px;
     }
 }

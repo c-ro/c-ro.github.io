@@ -22,7 +22,11 @@ app.factory('items', [function(){
 			{ name: 'onions', price: 2.19, qty: 0, units: 'ct', category: "produce"},
 			{ name: 'limes', price: 0.44, qty: 0, units: 'ct', category: "produce"},
 			{ name: 'beer', price: 9.99, qty: 0, units: 'ct', category: "beverages"},
-			{ name: 'shrimp', price: 15.98, qty: 1, units: 'lbs', category: "meat"}
+			{ name: 'shrimp', price: 15.98, qty: 1, units: 'lbs', category: "meat"},
+			{ name: 'frozen corn', price: 0, qty: 0, units: 'ct', category: "produce"},
+			{ name: 'morningstar', price: 0, qty: 1, units: 'ct', category: ""},
+			{ name: 'starbucks via', price: 0, qty: 1, units: 'ct', category: "beverages"},
+			{ name: 'seattles best', price: 0, qty: 1, units: 'ct', category: "beverages"},
 		]
 	};
 
@@ -40,7 +44,7 @@ app.controller('MainCtrl', [
 
 		$scope.itemlist = items.items;
 
-		$scope.budget = 0;
+		$scope.budget = 150;
 
 		$scope.hiddenItems = [];
 
