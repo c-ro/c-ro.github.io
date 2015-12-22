@@ -5,7 +5,7 @@
     "github":"https://github.com/c-ro/pickup",
     "demo":"https://murmuring-everglades-1907.herokuapp.com/",
     "description":"A MEAN stack grocery app that tracks prices and purchasing history.",
-    "notes":["mean", "javascript"]
+    "notes":["mean", "javascript", "bootstrap"]
   },
   {
     "name":"KRM Coat Drive",
@@ -13,7 +13,7 @@
     "github":"https://github.com/c-ro/krm-coat-drive",
     "demo":"http://bit.ly/krmcoatdrive",
     "description":"A MEAN stack pledge tracker for a Kentucky Refugee Ministries coat drive.",
-    "notes":["mean", "javascript"]
+    "notes":["mean", "javascript", "bootstrap"]
   },
   {
     "name":"Cloud Seeder",
