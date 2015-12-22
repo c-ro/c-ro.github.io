@@ -19,7 +19,7 @@
         <h3>{{ project.name }}</h3>
         <h4><a href="{{ project.demo }}" target="new">{{ project.demo.indexOf("crx") >= 0 ? "Download CRX" : "View Demo" }}</a></h4>
         <p>{{ project.description }}</p>
-        <span ng-repeat="note in project.notes">{{ note }}</span>
+        <span data-ng-repeat="note in project.notes"><i>{{ note }}, </i></span>
         <a class="btn btn-primary" href="{{ project.github }}" target="new">View On Github <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 </div>
