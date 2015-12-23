@@ -19,7 +19,7 @@
     "name":"Cloud Seeder",
     "screenshot":"screenshots/cloud.png",
     "github":"https://github.com/c-ro/cloud-seeder",
-    "demo":"crx/cloudseeder.crx",
+    "demo":"https://chrome.google.com/webstore/detail/cloud-seeder/ddfgphdopgmpioljhdjlodlbogkeedla",
     "description":"A chrome extension that helps you find and consume free downloads on Soundcloud.com",
     "notes":["JQuery", "Javascript", "Chrome"]
   },
@@ -35,7 +35,7 @@
     "name":"WRFL Timer",
     "screenshot":"screenshots/wrfltimer.png",
     "github":"https://github.com/c-ro/administrative-details",
-    "demo":"crx/wrfltimer.crx",
+    "demo":"https://chrome.google.com/webstore/detail/wrfl-timer/fepekodfobgahnbkdmfpgfdoepecnkig",
     "description":"A chrome extension that acts as a visual alarm clock, helping WRFL DJs stay on pace and stick to the traffic guide",
     "notes":["JQuery", "Javascript", "Chrome"]
   },

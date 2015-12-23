@@ -17,7 +17,7 @@
     </div>
     <div class="project col-md-5">
         <h3>{{ project.name }}</h3>
-        <h4><a href="{{ project.demo }}" target="new">{{ project.demo.indexOf("crx") >= 0 ? "Download CRX" : "View Demo" }}</a></h4>
+        <h4><a href="{{ project.demo }}" target="new">{{ project.demo.indexOf("chrome") >= 0 ? "Try It" : "View Demo" }}</a></h4>
         <p>{{ project.description }} (<span data-ng-repeat="note in project.notes"><i>{{ note }}{{$last ? '' : ($index==note.length-2) ? ', and ' : ',&nbsp;'}}</i></span>)</p>
         <a class="btn btn-primary" href="{{ project.github }}" target="new">View On Github <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
