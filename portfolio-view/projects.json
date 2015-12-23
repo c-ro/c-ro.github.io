@@ -43,7 +43,7 @@
     "name":"POS Paint",
     "screenshot":"screenshots/pos.png",
     "github":"https://github.com/c-ro/pos-paint",
-    "demo":"http://c-ro.github.io/PoS%20paint/index.html",
+    "demo":"http://c-ro.github.io/PoS%20Paint/index.html",
     "description":"An experiment with CSS Flexbox and terrible rendition of MS Paint.",
     "notes":["Javascript", "Flexbox"]
   },
