@@ -10,10 +10,14 @@ title: A man, a plan, a blog.
 email: carlryanoverton@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   The coding blog of Carl Ryan Overton.  Javascript and chill?
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+baseurl: "blog" # the subpath of your site, e.g. /blog
+url: "http://c-ro.github.io" # the base hostname & protocol for your site
 twitter_username: gnirtsmodnar
 github_username:  c-ro
 
+
+exclude: [vendor]
 # Build settings
 markdown: kramdown
+
+
