@@ -1,4 +1,11 @@
-[
+[  
+  {
+    "name":"Cherrypicker",
+    "screenshot":"screenshots/cherrypicker.png",
+    "github":"https://github.com/c-ro/cherrypicker",
+    "description": "A Node.js app that creates and maintains a match thread on the subreddit of your choice.  Updates automatically via home team's Twitter account.",
+    "notes":["Node", "Javascript", "Twit", "Snoocore"]
+  },
   {
     "name":"PickUp",
     "screenshot":"screenshots/pickup.png",
