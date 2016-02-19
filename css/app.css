@@ -72,11 +72,11 @@ body {
 }
 
 .navbar-toggle {
-    background-color: $grey-color-dark;
+    background-color: #9d9d9d;
 }
 
 .icon-bar {
-    background-color: $grey-color-light;
+    background-color: $fff;
 }
 
 .blog {
