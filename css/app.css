@@ -45,6 +45,7 @@ body {
 
 .navbar {
   background-color: #dddddd !important;
+  height: 50px;
 }
 
 .navbar a {
