@@ -23,7 +23,10 @@ angular.directive('list', [function(){
 
 	var directive = {
 		restrict: 'EA',
-		templateUrl: 'sectionDirective/section.html'
+		scope: "=resume",
+		templateUrl: 'sectionDirective/sectionDirective.html'
+		// ,
+		// link: listFunc
 	};
 
 	return directive;
