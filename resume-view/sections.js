@@ -1,10 +1,8 @@
 $(function(){
 
-	$('div').each(function (index, value){
-	  console.log($(this).attr('href'));
-	});
+   	$('.resume-section').each(function(index, value){
 
-   	$('.resume-section').each(function(){
+   		console.log($(this));
 
 	    var content = $(this).find('.section-content');
 	   	var header = $(this).find('.section-header');
