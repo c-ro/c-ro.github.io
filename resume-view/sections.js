@@ -13,8 +13,10 @@ $(function(){
 
 	// });
 
+	console.log("I work.");
+
    	$('.resume-section').click(function(){
-   		alert("why the fuck?");
+   		alert("I don't.");
    	});
 
 
