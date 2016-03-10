@@ -15,8 +15,8 @@ $(function(){
 
 	console.log("I work.");
 
-   	$('#test').click(function(){
-   		alert("I don't.");
+   	$('.resume-section').click(function(){
+   		alert("why the fuck?");
    	});
 
 

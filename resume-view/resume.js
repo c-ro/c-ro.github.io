@@ -9,6 +9,12 @@ angular.module('myApp.resume', ['ngRoute'])
   });
 }])
 
-.controller('resumeCtrl', [function() {
+.controller('resumeCtrl', ['$scope', function($scope) {
+	
+	$scope.resume = {
+		education: "yes",
+		experience: "enough",
+		skills: "plenty"
+	};
 
 }]);
