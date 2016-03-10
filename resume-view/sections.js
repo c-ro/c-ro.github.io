@@ -1,12 +1,9 @@
-$(document).ready(function() {
+$(function(){
 
-	console.log("sections.js loaded");
+   	$('.resume-section').each(function(){
 
-	$('.resume-section').each(function(index, element){
-	    
-	    var $this = $(this);	    
-	    var content = $this.find('.section-content');
-	   	var header = $this.find('.section-header');
+	    var content = $(this).find('.section-content');
+	   	var header = $(this).find('.section-header');
 
 	    header.click(function(){
 	    	console.log("works?");
@@ -15,5 +12,5 @@ $(document).ready(function() {
 		}); 
 
 	});
-
+	
 });
