@@ -1,3 +1,18 @@
+<script>
+   	$('.resume-section').each(function(){
+
+	    var content = $(this).find('.section-content');
+	   	var header = $(this).find('.section-header');
+
+	    header.click(function(){
+	    	console.log("works?");
+		    $(this).toggleClass('open');
+		    content.slideToggle();
+		}); 
+
+	});
+</script>
+
 <link rel="stylesheet" href="css/resume.css">
 
 <a href="./resume-view/Carl Ryan Overton Resume.pdf">Download PDF</a>
