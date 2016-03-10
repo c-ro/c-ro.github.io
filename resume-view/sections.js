@@ -15,7 +15,7 @@ $(function(){
 
 	console.log("I work.");
 
-   	$('.section-header').click(function(){
+   	$('#test').click(function(){
    		alert("I don't.");
    	});
 
