@@ -22,7 +22,7 @@ angular.directive('list', [function(){
 	};
 
 	var directive = {
-		restrict: 'E',
+		restrict: 'EA',
 		templateUrl: 'sectionDirective/section.html'
 	};
 
