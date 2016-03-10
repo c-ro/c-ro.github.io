@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$('.section').each(function(){
+	$('.resume-section').each(function(){
 	    
 	    var content = $(this).find('.section-content');
 	   
