@@ -1,5 +1,9 @@
 $(function(){
 
+	$.each([ 52, 97 ], function( index, value ) {
+		  alert( index + ": " + value );
+		});
+
    	$('.resume-section').each(function(){
 
 	    var content = $(this).find('.section-content');
@@ -12,5 +16,5 @@ $(function(){
 		}); 
 
 	});
-	
+
 });
