@@ -13,7 +13,7 @@ $(function(){
 
 	// });
 
-   	$('.resume-section').click(function(){
+   	$('.resumes-section').click(function(){
    		alert("why the fuck?");
    	});
 
