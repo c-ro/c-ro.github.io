@@ -1,0 +1,65 @@
+[  
+  {
+    "name":"Cherrypicker",
+    "screenshot":"screenshots/cherrypicker.png",
+    "github":"https://github.com/c-ro/cherrypicker",
+    "description": "A Node.js app that creates and maintains a match thread on the subreddit of your choice.  Updates automatically via home team's Twitter account.",
+    "notes":["Node", "Javascript", "Twit", "Snoocore"]
+  },
+  {
+    "name":"PickUp",
+    "screenshot":"screenshots/pickup.png",
+    "github":"https://github.com/c-ro/pickup",
+    "demo":"https://murmuring-everglades-1907.herokuapp.com/",
+    "description":"A MEAN stack grocery app that tracks prices and purchasing history.",
+    "notes":["MEAN", "Javascript", "Bootstrap"]
+  },
+  {
+    "name":"KRM Coat Drive",
+    "screenshot":"screenshots/krm.png",
+    "github":"https://github.com/c-ro/KRM-Coat-Drive",
+    "demo":"http://bit.ly/KRMCoatDrive",
+    "description":"A MEAN stack pledge tracker for a Kentucky Refugee Ministries coat drive.",
+    "notes":["MEAN", "Javascript", "Bootstrap"]
+  },
+  {
+    "name":"Cloud Seeder",
+    "screenshot":"screenshots/cloud.png",
+    "github":"https://github.com/c-ro/cloud-seeder",
+    "demo":"https://chrome.google.com/webstore/detail/cloud-seeder/ddfgphdopgmpioljhdjlodlbogkeedla",
+    "description":"A chrome extension that helps you find and consume free downloads on Soundcloud.com",
+    "notes":["JQuery", "Javascript", "Chrome"]
+  },
+    {
+    "name":"GOP Whack-a-Mole",
+    "screenshot":"screenshots/gop.png",
+    "github":"https://github.com/c-ro/gop-whackamole",
+    "demo":"http://c-ro.github.io/whackamole/index.html",
+    "description":"A browser based javascript game that utilizes CSS Flexbox to play on mobile and desktop",
+    "notes":["Javascript", "Flexbox"]
+  },
+  {
+    "name":"WRFL Timer",
+    "screenshot":"screenshots/wrfltimer.png",
+    "github":"https://github.com/c-ro/administrative-details",
+    "demo":"https://chrome.google.com/webstore/detail/wrfl-timer/fepekodfobgahnbkdmfpgfdoepecnkig",
+    "description":"A chrome extension that acts as a visual alarm clock, helping WRFL DJs stay on pace and stick to the traffic guide",
+    "notes":["JQuery", "Javascript", "Chrome"]
+  },
+  {
+    "name":"POS Paint",
+    "screenshot":"screenshots/pos.png",
+    "github":"https://github.com/c-ro/pos-paint",
+    "demo":"http://c-ro.github.io/PoS%20Paint/index.html",
+    "description":"An experiment with CSS Flexbox and terrible rendition of MS Paint.",
+    "notes":["Javascript", "Flexbox"]
+  },
+  {
+    "name":"WRFL Bot",
+    "screenshot":"screenshots/wrflbot.png",
+    "github":"https://github.com/c-ro/chartbot",
+    "demo":"https://twitter.com/wrflbot",
+    "description":"WRFL bot scrapes the WRFL playlist, tweeting out the daily, weekly, and monthly charts and responding to simple questions from followers",
+    "notes":["Ruby", "Rails"]
+  }
+]
