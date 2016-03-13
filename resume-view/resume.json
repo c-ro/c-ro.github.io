@@ -1,46 +1,25 @@
-[  
-  {
-    "header" : "education",
-    "":"",
-  }
-]
+{
+  "Contact": ["Phone: (859) 608-2913", "E-Mail: carlryanoverton@gmail.com"],
 
-Carl Ryan Overton
+  "Education" : ["Bachelor  of  Fine  Arts, Photography Maryland  Institute College of  Art (Dec. 2009)"],
 
-Lexington, KY
-Phone: (859) 608-2913 E-Mail: carlryanoverton@gmail.com
+  "Experience" : ["Lexmark - Lexington, KY - Digital Imaging Manager (Oct  2011  - Present)",
+      "Established and facilitates insourcing of Lexmark’s product, headshot, and editorial photography production by implementing efficient workflow procedures and collaborating with other departments",
+      "Produces  instructional videos  for clientele,  interviews, professional and  departmental profiles for internal communications",
+      "Manages product photography database and implemented design and functionality changes to the client side web portal to enhance usability",
+      "Established a blog of event photography to make the documentation of corporate, social, and volunteering events more accessible to employees",
+    
+      "Shootingfrenzy - Lexington, KY – Owner/Operator (Feb 2013  – Oct 2015)", 
+      "Oversaw marketing, sales, website/social media and operations for live photobooth service",
+      "Executed photography and videography for events and other freelance projects",
 
-Education
-Experience
-Skills
+      "Fan Outfitters  - Lexington,  KY  - Staff Photographer (Sept  2010  – Oct 2011)", 
+      "Produced digital images  of  1000+ items within  6 months  to  establish the company’s e-commerce  presence",
+      "Executed product,  fashion,  architectural,  and event photography for documentary and promotional purposes",
+      "Designed and implemented system of photographic templates, Photoshop automations, and workflow  procedures to  increase studio productivity"],
 
-Bachelor  of  Fine  Arts, Photography
-Maryland  Institute College of  Art (Dec. 2009)
-
-Lexmark - Lexington,  KY  - Digital Imaging Manager   (Oct  2011  - Present)
-  Established and facilitates insourcing  of  Lexmark’s product,  headshot, and editorial 
-    photography production  by  implementing  efficient workflow  procedures  and 
-    collaborating with  other departments
-  Produces  instructional videos  for clientele,  interviews, professional and  departmental  
-    profiles  for internal  communications
-  Manages product photography database  and implemented design  changes to  the 
-    client  side  web portal  to  increase  functionality usability
-  Established a blog  of  Lexmark event photography to  make  the documentation of  
-    conferences and social  events more accessible  to  employees
-
-Shootingfrenzy    - Lexington,  KY  – Owner/Operator    (Feb  2013  – Oct 2015)
-  Oversaw marketing,  sales,  website/social  media and operations for  live  photobooth  
-    service
-  Executed photography  and videography for events  and other freelance projects
-
-Fan Outfitters  - Lexington,  KY  - Staff Photographer (Sept  2010  – Oct 2011)
-  Produced  digital images  of  1000+ items within  6 months  to  establish the company’s 
-    e-commerce  presence  
-  Executed  product,  fashion,  architectural,  and event photography for documentary 
-    and promotional purposes
-  Designed  a system  of  photographic  templates,  Photoshop action  scripts,  and 
-    workflow  procedures  to  increase  studio  productivity
-
-Still and video image capture and post-production,  Adobe CC  (Photoshop, Premiere, 
-InDesign, Illustrator), visual  storytelling, Excel,  coding w/Javascript (incl.  JQuery, MEAN),  
-Ruby/Rails
+      "Skills" : ["JavaScript (Angular, Node, Express, JQuery)",
+      "Ruby (Rails)",
+      "Still and video image capture and post-production",
+      "Adobe CC (Photoshop, Premiere, InDesign, Illustrator)"]
+}

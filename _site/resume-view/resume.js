@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.resume', ['ngRoute', 'ui.bootstrap'])
+angular.module('myApp.resume', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/resume', {
@@ -9,15 +9,13 @@ angular.module('myApp.resume', ['ngRoute', 'ui.bootstrap'])
   });
 }])
 
-.controller('resumeCtrl', ['$scope', function($scope) {
+.controller('resumeCtrl', ['$scope', '$http', function($scope, $http) {
 
 	$scope.isCollapsed = true;
 	
-	$scope.resume = {
-		education: ["yes", "a few years ago though", "mostly I'm a student of life"],
-		experience: ["enough", "well, enough to know I'm professional", "I am trying to change careers now so these might not be terribly relevant"],
-		skills: ["plenty", "I'm getting pretty good at coding", "and I'm an expert in several Adobe CC products", "I also enjoy cooking and seem to have an aptitude for it."]
-	};
+	$http.get('resume-view/resume.json').then(function(res){
+		$scope.resume = res.data;
+     });
 
 }])
 

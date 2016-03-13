@@ -4,7 +4,9 @@ var app = angular.module('myApp', [
   'myApp.resume',
   'myApp.contact',
   'myApp.portfolio',
-  'myApp.version'
+  'myApp.version',
+  'ui.bootstrap',
+  'ngAnimate'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/portfolio'});
