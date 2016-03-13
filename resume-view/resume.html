@@ -16,6 +16,14 @@
 
   <uib-accordion-group heading="{{section}}" ng-repeat="(section, content) in resume" template-url="accordion-group.html"> 
     <div ng-click="isopen=!isopen">
+      
+      <!-- sub-section logic -->
+          <!-- ng-if object contains object -->
+          <!-- display object in bold w/o bullets -->
+            <!-- then display child object indented with bullets -->
+          <!-- else display object with bullets -->
+      <!-- end sub-section logic -->
+      
       <ul>
         <li ng-repeat="detail in content"> {{ detail }} </li>
       </ul>
