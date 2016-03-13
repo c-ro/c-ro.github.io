@@ -1,7 +1,13 @@
 <link rel="stylesheet" href="css/resume.css">
 
 <a href="./resume-view/Carl Ryan Overton Resume.pdf">Download PDF</a>
-<div class="resume-section"></div>
+<uib-accordion>
+  <uib-accordion-group heading="{{section}}" ng-repeat="(section, content) in resume"> 
+    <ul>
+      <li ng-repeat="detail in content"> {{ detail }} </li>
+    </ul>
+  </uib-accordion-group>
+</uib-accordion>
 
 
 <!-- <div id="test" class="resume-section">

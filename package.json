@@ -10,12 +10,12 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.4.7",
+    "angular-ui-bootstrap": "^1.2.4",
     "bootstrap": "^3.3.6",
     "bower": "^1.7.1",
     "ejs": "^1.0.0"
   },
   "engines": {
     "node": "0.12.7"
-
   }
 }

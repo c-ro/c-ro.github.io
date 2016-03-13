@@ -1,14 +1,20 @@
-<div>
-  <a href=""><div class="section-header">Resume</div></a>   
+<uib-accordion-group heading="{{section}}" ng-repeat="section in resume"> 
+<!-- (section, content) in resume -->
+
+<!--   <a href=""><div class="section-header">{{ section }}</div></a>
+
   <div class="section-content">
     <ul>
-      <li>{{ resume.education }}</li>
+      <li ng-repeat="detail in content"> {{ detail }} </li>
     </ul>
-    <ul>
-      <li>{{ resume.experience }}</li>
-    </ul>
-    <ul>
-      <li>{{ resume.skills }}</li>
-    </ul>
+  </div> -->
+
+</uib-accordion-group>
+
+<!-- <div>
+  <button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+  <hr>
+  <div uib-collapse="isCollapsed">
+    <div class="well well-lg">Some content</div>
   </div>
-</div>
+</div> -->

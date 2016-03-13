@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.resume', ['ngRoute'])
+angular.module('myApp.resume', ['ngRoute', 'ui.bootstrap'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/resume', {
@@ -10,11 +10,13 @@ angular.module('myApp.resume', ['ngRoute'])
 }])
 
 .controller('resumeCtrl', ['$scope', function($scope) {
+
+	$scope.isCollapsed = true;
 	
 	$scope.resume = {
-		education: "yes",
-		experience: "enough",
-		skills: "plenty"
+		education: ["yes", "a few years ago though", "mostly I'm a student of life"],
+		experience: ["enough", "well, enough to know I'm professional", "I am trying to change careers now so these might not be terribly relevant"],
+		skills: ["plenty", "I'm getting pretty good at coding", "and I'm an expert in several Adobe CC products", "I also enjoy cooking and seem to have an aptitude for it."]
 	};
 
 }])
@@ -22,18 +24,17 @@ angular.module('myApp.resume', ['ngRoute'])
 .directive('resumeSection', [function(){
 
 	var pageFunc = function(){
-	$('.resume-section').each(function(){
 
-	    var content = $(this).find('.section-content');
-	   	var header = $(this).find('.section-header');
+	// $('.resume-section').each(function(){
+		
+	//     var content = $(this).find('.section-content');
+	//    	var header = $(this).find('.section-header');
 
-	    header.click(function(){
-	    	console.log("works?");
-		    $(this).toggleClass('open');
-		    content.slideToggle();
-		}); 
-
-	});
+	//     header.click(function(){
+	// 	    $(this).toggleClass('open');
+	// 	    content.slideToggle();
+	// 	});
+	// });
 	};
 
 	var directive = {
