@@ -14,20 +14,35 @@
 
 <uib-accordion >
 
-  <uib-accordion-group heading="{{section}}" ng-repeat="(section, content) in resume" template-url="accordion-group.html"> 
+  <uib-accordion-group heading="{{header}}" ng-repeat="(header, section) in resume" template-url="accordion-group.html"> 
     <div ng-click="isopen=!isopen">
-      
+        <div ng-repeat="content in section">
+          <!-- if this section CONTAINS lists -->
+          <div ng-if="content | isArray">
+            <div ng-repeat="item in content">
+              
+              <div ng-if="$index === 0">
+                <h4>{{ item }}</h4>
+              </div>
+              
+              <ul>
+              <li ng-if="$index > 0">{{ item }}</li>
+              </ul>
+            
+            </div>
+          </div>
+          <!-- if this section IS a list -->
+          <div ng-if="content | isString">
+            <h4>{{ content }}</h4>
+          </div>
+        </div>     
       <!-- sub-section logic -->
           <!-- ng-if object contains object -->
           <!-- display object in bold w/o bullets -->
             <!-- then display child object indented with bullets -->
           <!-- else display object with bullets -->
       <!-- end sub-section logic -->
-      
-      <ul>
-        <li ng-repeat="detail in content"> {{ detail }} </li>
-      </ul>
-    </div>
+      </div>
   </uib-accordion-group>
   <br>
   <a href="./resume-view/Carl Ryan Overton Resume.pdf">

@@ -45,4 +45,16 @@ angular.module('myApp.resume', ['ngRoute'])
 
 	return directive;
 
-}]);
+}])
+
+.filter("isArray", function() {
+        return function(input) {
+            return angular.isArray(input);
+        };
+})
+
+.filter("isString", function() {
+        return function(input) {
+            return angular.isString(input);
+        };
+});

@@ -37,6 +37,6 @@
 }
 
 .panel-download {
-  color: white;
+  color: white !important;
   background-color: #eee;
 }
