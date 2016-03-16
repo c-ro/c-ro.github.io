@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Personal Website of Carl Ryan Overton">
+    <meta name="author" content="Carl Ryan Overton">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="blog">
+                        <li class="accent">
                             <a href="http://c-ro.github.io/blog/">Blog</a>
                         </li>
                         <li>
@@ -72,7 +72,7 @@
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container -->
-            <div>
+            <div> <!-- Carl's Head -->
                 <img src="http://i.imgur.com/pABxZAM.png" class="head">
             </div>
         </nav>
@@ -113,6 +113,14 @@
     <!-- Animate Carl's Head on scroll -->
     <script src="js/animate-scroll.js"></script>
 
+    <!-- close navbar when a link is clicked -->
+    <script type="text/javascript">
+    $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+    });
+    </script>
 </body>
 
 </html>

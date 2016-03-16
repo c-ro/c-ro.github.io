@@ -1,5 +1,5 @@
 {
- "Contact": ["Phone: (859) 608-2913", "E-Mail: carlryanoverton@gmail.com"],
+ "Contact": ["Phone: (859) 608-2913", "E-Mail: carlryanphoto@gmail.com"],
 
  "Education" : ["Bachelor of Fine Arts, Photography", "Maryland Institute College of Art (Dec. 2009)"],
 
@@ -18,10 +18,11 @@
    ["Fan Outfitters - Lexington, KY - Staff Photographer (Sept 2010 – Oct 2011)", 
      "Produced digital images of 1000+ items within 6 months to establish the company’s e-commerce presence",
      "Executed product, fashion, architectural, and event photography for documentary and promotional purposes",
-     "Designed and implemented system of photographic templates, Photoshop automations, and workflow procedures to increase studio productivity"]],
+     "Designed and implemented system of photographic templates, Photoshop automations, and workflow procedures to increase studio productivity"]
+  ],
 
    "Skills" : ["JavaScript (Angular, Node, Express, JQuery)",
-   "Ruby (Rails)",
-   "Still/video image capture and studio lighting technique",
-   "Adobe CC (Photoshop, Premiere, InDesign, Illustrator)"]
+     "Ruby (Rails)",
+     "Still/video image capture and studio lighting technique",
+     "Adobe CC (Photoshop, Premiere, InDesign, Illustrator)"]
 }

@@ -19,34 +19,6 @@ angular.module('myApp.resume', ['ngRoute'])
 
 }])
 
-.directive('resumeSection', [function(){
-
-	var pageFunc = function(){
-
-	// $('.resume-section').each(function(){
-		
-	//     var content = $(this).find('.section-content');
-	//    	var header = $(this).find('.section-header');
-
-	//     header.click(function(){
-	// 	    $(this).toggleClass('open');
-	// 	    content.slideToggle();
-	// 	});
-	// });
-	};
-
-	var directive = {
-		controller: 'resumeCtrl',
-		restrict: 'AEC',
-		// template: "<span>works.</span>"
-		templateUrl: "/resume-view/resume-section.html",
-		link: pageFunc
-	};
-
-	return directive;
-
-}])
-
 .filter("isArray", function() {
         return function(input) {
             return angular.isArray(input);
