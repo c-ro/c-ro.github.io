@@ -33,7 +33,8 @@
           </div>
           <!-- if this section IS a list -->
           <div ng-if="content | isString">
-            <h4>{{ content }}</h4>
+          <div ng-bind-html="{{ content }} | to_trusted">{{ content }}</div>
+<!--             <h4>{{ content }}</h4> -->
           </div>
         </div>     
       <!-- sub-section logic -->
