@@ -1,9 +1,15 @@
-[  
+[ {
+    "name":"Markers",
+    "screenshot":"screenshots/markers.png",
+    "github":"https://github.com/c-ro/markers",
+    "description": "Markers is a node module for programmatic markdown generation.",
+    "notes":["Node", "Javascript", "Module"]
+  }, 
   {
     "name":"Cherrypicker",
     "screenshot":"screenshots/cherrypicker.png",
     "github":"https://github.com/c-ro/cherrypicker",
-    "description": "A Node.js app that creates and maintains a match thread on the subreddit of your choice.  Updates automatically via home team's Twitter account.",
+    "description": "An interactive Node.js app that creates and maintains match threads on the subreddits of your choice.  Updates automatically via home team's Twitter account.",
     "notes":["Node", "Javascript", "Twit", "Snoocore"]
   },
   {
