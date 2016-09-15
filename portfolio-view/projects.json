@@ -1,4 +1,11 @@
 [ {
+    "name":"The Illustrated Barber",
+    "screenshot":"screenshots/tib.png",
+    "demo":"http://www.theillustratedbarber.com",
+    "description": "A small appointment manager that allows customers to schedule time with a service provider.",
+    "notes":["AngularJS", "Ruby on Rails", "Javascript", "Bootstrap"]
+  },
+  {
     "name":"Markers",
     "screenshot":"screenshots/markers.png",
     "github":"https://github.com/c-ro/markers",
@@ -18,7 +25,7 @@
     "github":"https://github.com/c-ro/pickup",
     "demo":"https://murmuring-everglades-1907.herokuapp.com/",
     "description":"A MEAN stack grocery app that tracks prices and purchasing history.",
-    "notes":["MEAN", "Javascript", "Bootstrap"]
+    "notes":["MEAN", "AngularJS", "Javascript", "Bootstrap"]
   },
   {
     "name":"KRM Coat Drive",
@@ -26,7 +33,7 @@
     "github":"https://github.com/c-ro/KRM-Coat-Drive",
     "demo":"http://bit.ly/KRMCoatDrive",
     "description":"A MEAN stack pledge tracker for a Kentucky Refugee Ministries coat drive.",
-    "notes":["MEAN", "Javascript", "Bootstrap"]
+    "notes":["MEAN", "AngularJS", "Javascript", "Bootstrap"]
   },
   {
     "name":"Cloud Seeder",
@@ -66,6 +73,6 @@
     "github":"https://github.com/c-ro/chartbot",
     "demo":"https://twitter.com/wrflbot",
     "description":"WRFL bot scrapes the WRFL playlist, tweeting out the daily, weekly, and monthly charts and responding to simple questions from followers",
-    "notes":["Ruby", "Rails"]
+    "notes":["Ruby", "Ruby on Rails"]
   }
 ]
